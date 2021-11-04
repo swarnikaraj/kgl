@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>KGL-KRYSTAL GEMOLOGICAL LABORATORY</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="{{url_for('static',filename='assets/img/apple-icon.png')}}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{url_for('static',filename='assets/img/favicon.png')}}">
+    <!-- Load Require CSS -->
+    <link href="{{url_for('static',filename='assets/css/bootstrap.min.css')}}" rel="stylesheet">
+    <!-- Font CSS -->
+    <link href="{{url_for('static',filename='assets/css/boxicon.min.css')}}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Load Tempalte CSS -->
+    <link rel="stylesheet" href="{{url_for('static',filename='assets/css/templatemo.css')}}">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{url_for('static',filename='assets/css/custom.css')}}">
+
+
+<!--TemplateMo 561 Purple Buzz-->
+
+<!--https://templatemo.com/tm-561-purple-buzz-->
+
+
+</head>
+
+<body>
+<!--     Header-->
+    <nav id="main_nav" class="navbar navbar-expand-lg navbar-light bg-white shadow">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand h1" href="/"><img src="{{url_for('static',filename='assets/img/favicon.png')}}"  class="logo_img"></a>
+
+                  <span class="text-dark h1">KGL</span>
+                    <!-- <span class="text-primary h1">KGL</span>  -->
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler-success" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="navbar-toggler-success">
+                <div id="m-nav" class="flex-fill mx-xl-5 mb-2">
+                    <ul class="nav navbar-nav d-flex justify-content-between mx-xl-5 text-center text-dark">
+
+
+
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="/about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="/gemblog">Gemblogs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="/Education">Education</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="/contact">Contact</a>
+                        </li>
+                    </ul>
+
+                 </div>
+
+
+                  <button> <a class="nav-link ghost_btn" href="/verify"  id="dropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" >Verify your Report</a></button>
+
+
+            </div>
+        </div>
+    </nav>
+    <!-- Close Header -->
+ <div id="work_single_banner" class="bg-light w-100">
+        <div class="container-fluid text-light d-flex justify-content-center align-items-center border-0 rounded-0 p-0 py-5">
+            <div class="banner-content col-lg-8 m-lg-auto text-center py-5 px-3">
+                <h1 class="banner-heading h2 pb-5 typo-space-line-center">Admin Panel</h1>
+ <a href="/logout"><button class="btn banner-button rounded-pill px-md-5 px-4 py-2 radius-0  light-300"> Logout</button></a> <hr>   <a href="/dashboard"><button class="btn banner-button rounded-pill px-md-5 px-4 py-2 radius-0  light-300"> Dashboard</button></a>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+<div class="row py-3">
+            <div class="col-md-8 m-auto text-left justify-content-center">
+
+
+              <div class="row">
+            <div class="btn-toolbar justify-content-center pb-4" role="toolbar" aria-label="Toolbar with button groups">
+                <div class="btn-group me-2" role="group" aria-label="First group">
+                    <a href="/dashboard"><button type="button" class="btn btn-secondary text-white">Gemblogs</button></a>
+                </div>
+                <div class="btn-group me-2" role="group" aria-label="Second group">
+                    <a href="/editpost/0"><button type="button" class="btn btn-secondary text-white">Add new GemBlog</button></a>
+                </div>
+                <div class="btn-group me-2" role="group" aria-label="Second group">
+                    <a href="/contactmsg"><button type="button" class="btn btn-secondary text-white">Contact Message</button></a>
+                </div>
+                <div class="btn-group me-2" role="group" aria-label="Second group">
+                    <a href="/reports"><button type="button" class="btn btn-secondary text-white">Reports</button></a>
+                </div>
+                <div class="btn-group" role="group" aria-label="Third group">
+                    <a href="/editreport/0"><button type="button" class="btn btn-secondary text-white">Add new Report</button></a>
+                </div>
+            </div>
+        </div>
+
+            <hr>
+
+          <h1>Upload A File</h1>
+
+           <form action="/uploader" method="post" enctype="multipart/form-data">
+             <input type="file" name="file1">
+             <button type="submit">Submit</button>
+
+
+           </form>
+<hr>
+
+<hr>
+
+<a href="/editdossier/0"><button class="btn btn-primary">Add New Post</button></a>
+
+<hr>
+
+
+ <h1>Add/Edit post</h1>
+                <div class="col-lg-8 ">
+                <form class="contact-form row" method="post" action="/editdossier/{{sno}}" role="form">
+
+                     <div class="col-lg-6 mb-4">
+                        <div class="form-floating">
+                            <input type="text" class="form-control form-control-lg light-300" value="{{dossier.name}}" id="name" name="name" placeholder="Name">
+                            <label for="name"> Name</label>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-6 mb-4">
+                        <div class="form-floating">
+                            <input type="text" class="form-control form-control-lg light-300" value="{{dossier.receiptno}}" id="receiptNo" name="receiptno" placeholder="Receipt No">
+                            <label for="receiptno"> Receipt No</label>
+                        </div>
+                    </div>
+
+                  <div class="col-lg-6 mb-4">
+                        <div class="form-floating">
+                            <input type="text" class="form-control form-control-lg light-300" value="{{dossier.contactno}}" id="contactNo" name="contactno" placeholder="Contact No">
+                            <label for="contactno"> Contact No</label>
+                        </div>
+                    </div>
+
+                     <div class="col-lg-6 mb-4">
+                        <div class="form-floating">
+                            <input type="text" class="form-control form-control-lg light-300" value="{{dossier.particulars}}" id="particulars" name="particulars" placeholder="Particulars">
+                            <label for="particulars">Particulars</label>
+                        </div>
+                    </div>
+
+                      <div class="col-lg-6 mb-4">
+                        <div class="form-floating">
+                            <input type="text" class="form-control form-control-lg light-300" value="{{dossier.quantity}}" id="quantity" name="quantity" placeholder="Quantity">
+                            <label for="quantity">Quantity</label>
+                        </div>
+
+
+
+                      </div>
+
+
+                     <div class="col-12">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control light-300"  placeholder="Rate" value="{{dossier.rate}}" name="rate" id="rate">
+                            <label for="rate">Rate</label>
+                        </div>
+                    </div>
+
+
+
+                     <div class="col-12">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control light-300"  placeholder="total" value="{{dossier.total}}" name="total" id="Total">
+                            <label for="total">Total</label>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="form-floating mb-3">
+                            <input class="form-control light-300"  placeholder="paid"  value="{{dossier.paid}}"  name="paid" id="Paid">
+
+                            <label for="paid">Paid</label>
+                        </div>
+                    </div>
+
+
+                    <div class="col-12">
+                        <div class="form-floating mb-3">
+                            <input class="form-control light-300"  placeholder="balance"  value="{{dossier.balance}}"  name="balance" id="Balance">
+
+                            <label for="paid">Balance</label>
+                        </div>
+                    </div>
+
+
+                    <div class="col-12">
+                        <div class="form-floating mb-3">
+                            <input class="form-control light-300"  placeholder="heading"  value="{{dossier.heading}}"  name="heading" id="Heading">
+
+                            <label for="heading">Heading</label>
+                        </div>
+                    </div>
+
+
+                    <div class="col-12">
+                        <div class="form-floating mb-3">
+                            <input class="form-control light-300"  placeholder="logo"  value="{{dossier.logo}}"  name="logo" id="logo">
+
+                            <label for="logo">Logo</label>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="form-floating mb-3">
+                            <input class="form-control light-300"  placeholder="title"  value="{{dossier.title}}"  name="title" id="title">
+
+                            <label for="title">Title</label>
+                        </div>
+                    </div>
+
+
+                    <div class="col-12">
+                        <div class="form-floating mb-3">
+                            <input class="form-control light-300"  placeholder="subtitle"  value="{{dossier.subtitle}}"  name="subtitle" id="subtitle">
+
+                            <label for="subtitle">Sub-title</label>
+                        </div>
+                    </div>
+
+
+                    <div class="col-12">
+                        <div class="form-floating mb-3">
+                            <input class="form-control light-300"  placeholder="report number"  value="{{dossier.reportnumber}}"  name="reportnumber" id="reportnumber">
+
+                            <label for="subtitle">Report Number</label>
+                        </div>
+                    </div>
+
+
+                    <div class="col-12">
+                        <div class="form-floating mb-3">
+                            <input class="form-control light-300"  placeholder="shape"  value="{{dossier.shape}}"  name="shape" id="shape">
+
+                            <label for="subtitle">Shape</label>
+                        </div>
+                    </div>
+
+
+                    <div class="col-12">
+                        <div class="form-floating mb-3">
+                            <input class="form-control light-300"  placeholder="measurement"  value="{{dossier.measurement}}"  name="measurement" id="measurement">
+
+                            <label for="subtitle">Measurement</label>
+                        </div>
+                    </div>
+
+
+                    <div class="col-12">
+                        <div class="form-floating mb-3">
+                            <input class="form-control light-300"  placeholder="carat"  value="{{dossier.carat}}"  name="carat" id="carat">
+
+                            <label for="carat">Carat</label>
+                        </div>
+                    </div>
+
+
+                    <div class="col-12">
+                        <div class="form-floating mb-3">
+                            <input class="form-control light-300"  placeholder="colourgrade"  value="{{dossier.colourgrade}}"  name="colourgrade" id="colourgrade">
+
+                            <label for="colourgrade">Colourgrade</label>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-12">
+                        <div class="form-floating mb-3">
+                            <input class="form-control light-300"  placeholder="claritygrade"  value="{{dossier.claritygrade}}"  name="claritygrade" id="claritygrade">
+
+                            <label for="claritygrade">Claritygrade</label>
+                        </div>
+                    </div>
+
+
+                    <div class="col-12">
+                        <div class="form-floating mb-3">
+                            <input class="form-control light-300"  placeholder="cutgrade"  value="{{dossier.cutgrade}}"  name="cutgrade" id="cutgrade">
+
+                            <label for="cutgrade">Cutgrade</label>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="form-floating mb-3">
+                            <input class="form-control light-300"  placeholder="polish"  value="{{dossier.polish}}"  name="polish" id="polish">
+
+                            <label for="polish">Polish</label>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="form-floating mb-3">
+                            <input class="form-control light-300"  placeholder="symmetry"  value="{{dossier.symmetry}}"  name="symmetry" id="symmetry">
+
+                            <label for="symmetry">Symmetry</label>
+                        </div>
+                    </div>
+
+
+                    <div class="col-12">
+                        <div class="form-floating mb-3">
+                            <input class="form-control light-300"  placeholder="fluorescence"  value="{{dossier.fluorescence}}"  name="fluorescence" id="fluorescence">
+
+                            <label for="fluorescence">Fluorescence</label>
+                        </div>
+                    </div>
+
+
+                    <div class="col-12">
+                        <div class="form-floating mb-3">
+                            <input class="form-control light-300"  placeholder="Comment"  value="{{dossier.comment}}"  name="comment" id="comment">
+
+                            <label for="comment">Comment</label>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="form-floating mb-3">
+                            <input class="form-control light-300"  placeholder="img_file"  value="{{dossier.img_file}}"  name="img_file" id="img_file">
+
+                            <label for="img_file">Image file name</label>
+                        </div>
+                    </div>
+
+
+                    <div class="col-12">
+                        <div class="form-floating mb-3">
+                            <input class="form-control light-300"  placeholder="author"  value="{{dossier.author}}"  name="author" id="author">
+
+                            <label for="author">Author</label>
+                        </div>
+                    </div>
+
+
+
+                     <div class="col-md-12 col-12 m-auto text-end">
+                        <button type="submit" class="btn btn-secondary rounded-pill px-md-5 px-4 py-2 radius-0 text-light light-300">Submit</button>
+                    </div>
+
+                </form>
+
+</div>
+</div>
+            </div>
+
+        <div class="w-100 bg-primary py-3">
+            <div class="container">
+                <div class="row pt-2">
+                    <div class="col-lg-6 col-sm-12">
+                        <p class="text-lg-start text-center text-light light-300">
+                            © Copyright 2021 KRYSTAL GEMOLOGICAL LABORATORY. All Rights Reserved.
+                        </p>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    <!-- End Footer -->
+
+
+    <!-- Bootstrap -->
+    <script src="{{url_for('static',filename='assets/js/bootstrap.bundle.min.js')}}"></script>
+    <!-- Templatemo -->
+    <script src="{{url_for('static',filename='assets/js/templatemo.js')}}"></script>
+    <!-- Custom -->
+    <script src="{{url_for('static',filename='assets/js/custom.js')}}"></script>
+
+</body>
+
+</html>

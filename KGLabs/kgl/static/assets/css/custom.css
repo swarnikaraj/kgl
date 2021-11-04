@@ -1,0 +1,111 @@
+/*
+Custom CSS for TemplateMo 561 Purple Buzz
+
+https://templatemo.com/tm-561-purple-buzz
+
+*/
+
+
+#loading_s{
+position:fixed
+
+width:100%;
+height:100vh;
+background:black  url('https://media.giphy.com/media/iJmDndjwTydcPEeu3p/giphy.gif')
+no-repeat center;
+z-index:9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999;
+
+}
+
+.ghost_btn {
+  margin-right: 0px;
+  padding-right: 15px;
+  padding-bottom: 12px;
+  padding-left: 15px;
+  border: 1px solid  #4232C2;
+  border-radius: 20px;
+  background-color:  #4232C2; 
+  -webkit-transition-property: allundefined;
+  transition-property: allundefined;
+  color: #fff !important;
+  text-align:center;
+  font: size 14px;
+}
+
+.ghost_btn:hover {
+  border: 1px solid #627880;
+  background-color: #627880;
+  color: #fff !important;
+}
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.logo_img {
+    height: 100px;
+	transition:all 0.5s ease;
+}
+
+.bg-secondary {
+  background-color: #212529!important;
+}
+.text-secondary {
+  color: #ffffff!important;
+  font-weight: 700;
+}
+
+
+
+
+
+p, a {
+  font-weight: 700;
+  
+}
+
+.banner-button{
+  background-color: #ffffff;
+  color: black;
+}
+
+
+
+
+.text-muted{font-size: 25px !important;}
+
+
+
+.text-muted {
+  color: #f7fafe!important;
+}
+
+
+
+.text-secondary {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  font-size: 55px !important;
+}
+
+
+
+.light-300 {
+  font-family: 'Open Sans', sans-serif !important;
+  font-weight: 700 !important;
+}
+
+
+/* .py-5 {
+  padding-top: 0rem!important;
+  padding-bottom: 0rem!important;
+} */
+                
+
+
+
+
+
+
+ 
+
+  

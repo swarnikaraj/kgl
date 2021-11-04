@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>KGL-KRYSTAL GEMOLOGICAL LABORATORY
+    {% block title %}
+    {% endblock %}
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="{{url_for('static',filename='assets/img/apple-icon.png')}}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{url_for('static',filename='assets/img/favicon.png')}}">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <!-- Load Require CSS -->
+    <link href="{{url_for('static',filename='assets/css/bootstrap.min.css')}}" rel="stylesheet">
+    <!-- Font CSS -->
+    <link href="{{url_for('static',filename='assets/css/boxicon.min.css')}}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Load Tempalte CSS -->
+    <link rel="stylesheet" href="{{url_for('static',filename='assets/css/templatemo.css')}}">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{url_for('static',filename='assets/css/custom.css')}}">
+
+
+
+
+
+    <style>
+<!--        #main_nav{-->
+<!--        position:absolute; width:100%;}!important}-->
+
+        #downloader_btn{ position:sticky;  top:30px ; left: 30px ; border:1px solid black; padding:5px 20px;}
+    </style>
+
+
+
+
+</head>
+
+<div id="loading_s"></div>
+
+<body onload="swLoadFun()">
+
+    <nav id="main_nav" class="navbar navbar-expand-lg navbar-light bg-white shadow">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand h1" href="/"><img src="{{url_for('static',filename='assets/img/favicon.png')}}"  class="logo_img"></a>
+
+                  <span class="text-dark h3">KRYSTAL GEMOLOGICAL LABORATORY</span>
+                    <!-- <span class="text-primary h1">KGL</span>  -->
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler-success" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="navbar-toggler-success">
+                <div id="m-nav" class="flex-fill mx-xl-5 mb-2">
+                    <ul class="nav navbar-nav d-flex justify-content-between mx-xl-5 text-center text-dark">
+
+
+
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="/about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="/gemblog">Gemblogs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="/Education">Education</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="/contact">Contact</a>
+                        </li>
+                    </ul>
+
+                 </div>
+
+<button> <a class="nav-link ghost_btn" href="/allreports"  id="dropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" >Verify your Report</a></button>
+
+
+
+            </div>
+        </div>
+    </nav>
+    <!-- Close Header -->
+{% block content %}
+
+
+
+
+
+
+ {% endblock %}
+
+   <!-- Start Footer -->
+
+   <footer class="bg-secondary pt-4">
+        <div class="container">
+            <div class="row py-4">
+
+                <div class="col-lg-3 col-12 align-left">
+                    <a class="navbar-brand" href="index.html">
+                        <i class='bx bx-buildings bx-sm text-light'></i>
+                        <span class="text-light h5">KG</span> <span class="text-light h5 semi-bold-600">Labs</span>
+                    </a>
+                    <p class="text-light my-lg-4 my-2">
+                        #119/1, 1st Floor, Keerthi Plaza, OTC Road Nagarathpet, Bnaglore-560002
+                    </p>
+                    <ul class="list-inline footer-icons light-300">
+                        <li class="list-inline-item m-0">
+                            <a class="text-light" target="_blank" href="https://www.facebook.com/kglabs.in/">
+                                <i class="fab fa-facebook-f fa-2x"></i>
+<!--                                <i class='bx bxl-facebook-square bx-md'></i>-->
+                            </a>
+                        </li>
+                        <li class="list-inline-item m-0">
+                            <a class="text-light" target="_blank" href="https://www.linkedin.com/kglabs.in/">
+                                <i class='bx bxl-instagram-square bx-md'></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item m-0">
+                            <a class="text-light" target="_blank" href="https://wa.me/+918041249878">
+                                <i class="fab fa-whatsapp fa-2x"></i>
+<!--                                <i class='bx bxl-whatsapp-square bx-md'></i>-->
+                            </a>
+                        </li>
+                        <li class="list-inline-item m-0">
+                            <a class="text-light" target="_blank" href="https://instagram.com/krystalgemlab?r=nametag/">
+                                <i class="fab fa-instagram fa-2x"></i>
+<!--                                <i class='bx bxl-instagram-square bx-md'></i>-->
+                            </a>
+                        </li>
+                        <li class="list-inline-item m-0">
+                            <a class="text-light" target="_blank" href="https://medium.com/kglabs.in/">
+                                <i class="fab fa-medium-m fa-2x"></i>
+<!--                                <i class='bx bxl-medium-square bx-md' ></i>-->
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-4 my-sm-0 mt-4">
+                    <h3 class="h4 pb-lg-3 text-light light-300">Quick Connect</h3>
+                        <ul class="list-unstyled text-light light-300">
+                            <li class="pb-2">
+                                <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a class="text-decoration-none text-light" href="/">Home</a>
+                            </li>
+                            <li class="pb-2">
+                                <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a class="text-decoration-none text-light py-1" href="/about">About Us</a>
+                            </li>
+                            <li class="pb-2">
+                                <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a class="text-decoration-none text-light py-1" href="/gemblog">Gemblog</a>
+                            </li>
+                            <li class="pb-2">
+                                <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a class="text-decoration-none text-light py-1" href="/Education">Education</a>
+                            </li>
+                            <li class="pb-2">
+                                <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a class="text-decoration-none text-light py-1" href="/contact">Contact</a>
+                            </li>
+                        </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-4 my-sm-0 mt-4">
+                    <h2 class="h4 pb-lg-3 text-light light-300">Reports</h2>
+                    <ul class="list-unstyled text-light light-300">
+                        <li class="pb-2">
+                            <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a class="text-decoration-none text-light py-1" href="/dossierverifyinput">Diamond Report</a>
+                        </li>
+                        <li class="pb-2">
+                            <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a class="text-decoration-none text-light py-1" href="/verify_gem_jewellery">jewellery Report</a>
+                        </li>
+                        <li class="pb-2">
+                            <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a class="text-decoration-none text-light py-1" href="/gem_identification_verify">Coloured Stone</a>
+                        </li>
+
+                        <li class="pb-2">
+                            <i class='bx-fw bx bxs-chevron-right bx-xs'></i><a class="text-decoration-none text-light py-1" href="/allreports">Verify Report</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-4 my-sm-0 mt-4">
+                    <h2 class="h4 pb-lg-3 text-light light-300">Quick Connect</h2>
+                    <ul class="list-unstyled text-light light-300">
+                        <li class="pb-2">
+                            <i class='bx-fw bx bx-phone bx-xs'></i><a class="text-decoration-none text-light py-1" href="tel:+91-99861-19878">+91-80412-49878</a>
+                        </li>
+                        <li class="pb-2">
+                            <i class='bx-fw bx bx-mail-send bx-xs'></i><a class="text-decoration-none text-light py-1" href="mailto:info@kglabs.in">info@kglabs.in</a>
+                        </li>
+                         <li class="pb-2">
+                            <a class="text-decoration-none text-light py-1" href="/termsConditions">Terms & Conditions</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="w-100 bg-primary py-3">
+            <div class="container">
+                <div class="row pt-2">
+                    <div class="col-lg-6 col-sm-12">
+                        <p class="text-lg-start text-center text-light light-300">
+                            © Copyright 2021 KRYSTAL GEMOLOGICAL LABORATORY. All Rights Reserved.
+                        </p>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </footer>
+    <!-- End Footer -->
+
+
+    <!-- Bootstrap -->
+    <script src="{{url_for('static',filename='assets/js/bootstrap.bundle.min.js')}}"></script>
+    <!-- Load jQuery require for isotope -->
+    <script src="{{url_for('static',filename='assets/js/jquery.min.js')}}"></script>
+    <!-- Isotope -->
+    <script src="{{url_for('static',filename='assets/js/isotope.pkgd.js')}}"></script>
+    <!-- Page Script -->
+    <script>
+        $(window).load(function() {
+            // init Isotope
+            var $projects = $('.projects').isotope({
+                itemSelector: '.project',
+                layoutMode: 'fitRows'
+            });
+            $(".filter-btn").click(function() {
+                var data_filter = $(this).attr("data-filter");
+                $projects.isotope({
+                    filter: data_filter
+                });
+                $(".filter-btn").removeClass("active");
+                $(".filter-btn").removeClass("shadow");
+                $(this).addClass("active");
+                $(this).addClass("shadow");
+                return false;
+            });
+        });
+    </script>
+    <!-- Templatemo -->
+    <script src="{{url_for('static',filename='assets/js/templatemo.js')}}"></script>
+    <!-- Custom -->
+    <script src="{{url_for('static',filename='assets/js/custom.js')}}"></script>
+
+<script>
+
+
+
+
+var preloader_sw=document.getElementById('loading_s')
+
+function swLoadFun(){
+preloader_sw.style.display='none';
+
+}
+
+</script>
+
+</body>
+
+</html>
+

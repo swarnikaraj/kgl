@@ -1,0 +1,37 @@
+{% extends 'controlbase.html' %}
+
+
+{% block title %}
+
+Reports
+{% endblock %}
+
+
+
+
+{% block content %}
+<table class="table table-sm">
+  <thead>
+
+{% for contact in contact %}
+    <tr>
+      <th scope="col">{{contact.sno}}</th>
+      <th scope="col">{{contact.name}}</th>
+      <th scope="col">{{contact.email}}</th>
+      <th scope="col">{{contact.phone}}</th>
+      <th scope="col">{{contact.subject}}</th>
+      <th scope="col">{{contact.msg}}</th>
+    </tr>
+{% endfor %}
+
+
+
+  </tbody>
+</table>
+
+
+
+
+{% endblock %}
+
+

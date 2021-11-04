@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+
+Employees
+{% endblock %}
+
+
+
+
+{% block content %}
+
+
+
+
+
+    <!-- Close Header -->
+
+    <!-- Close Header -->
+
+
+    <!-- Start Banner Hero -->
+    <div id="work_banner" class="banner-wrapper bg-light w-100 py-5">
+        <div class="banner-vertical-center-work container text-light d-flex justify-content-center align-items-center py-5 p-0">
+            <div class="banner-content col-lg-8 col-12 m-lg-auto text-center">
+  <h1 class="banner-heading h2 display-3 pb-5 semi-bold-600 typo-space-line-center">Reports Available</h1>
+
+            </div>
+        </div>
+    </div>
+    <!-- End Banner Hero -->
+
+
+    <!-- Start Contact -->
+
+
+
+
+
+
+ <section class="banner-bg bg-white py-5">
+        <div class="container my-4">
+            <div class="row text-center">
+
+                <div class="objective col-lg-4">
+                    <div class="objective-icon card m-auto py-4 mb-2 mb-sm-4 bg-secondary shadow-lg">
+                        <img class="team-member-img img-fluid  p-4" src="{{url_for('static',filename='./assets/img/cont.png')}}" alt="Card image">
+                    </div>
+                    <h2 class="objective-heading h3 mb-2 mb-sm-4 light-300"><a  class="nav-link btn-outline-primary rounded-pill px-3"  target="_blank" href="/dossierverifyinput">Diamond Dossier</a></h2>
+
+                </div>
+
+                <div class="objective col-lg-4 mt-sm-0 mt-4">
+                    <div class="objective-icon card m-auto py-4 mb-2 mb-sm-4 bg-secondary shadow-lg">
+                         <img class="team-member-img img-fluid p-4" src="{{url_for('static',filename='./assets/img/j.png')}}" alt="Card image">
+
+                    </div>
+                    <h2 class="objective-heading h3 mb-2 mb-sm-4 light-300"><a class="nav-link btn-outline-primary rounded-pill px-3" target="_blank" href="/diamond_jewellery_verify">Diamond Jewellery</a></h2>
+
+                </div>
+
+                <div class="objective col-lg-4 mt-sm-0 mt-4">
+                    <div class="objective-icon card m-auto py-4 mb-2 mb-sm-4 bg-secondary shadow-lg">
+                         <img class="team-member-img img-fluid  p-4" src="{{url_for('static',filename='./assets/img/g.png')}}" alt="Card image">
+                    </div>
+                    <h2 class="objective-heading h3 mb-2 mb-sm-4 light-300"><a class="nav-link btn-outline-primary rounded-pill px-3" target="_blank" href="/lab_grown_verify">Lab Grown Diamond </a> </h2>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+<section class="banner-bg bg-white py-5">
+        <div class="container my-4">
+            <div class="row text-center">
+
+                <div class="objective col-lg-4">
+                    <div class="objective-icon card m-auto py-4 mb-2 mb-sm-4 bg-secondary shadow-lg">
+                        <img class="team-member-img img-fluid  p-4" src="{{url_for('static',filename='./assets/img/gemj.png')}}" alt="Card image">
+                    </div>
+                    <h2 class="objective-heading h3 mb-2 mb-sm-4 light-300"><a class="nav-link btn-outline-primary rounded-pill px-3" target="_blank" href="/gem_identification_verify">Gem Stone Identification</a></h2>
+
+                </div>
+
+                <div class="objective col-lg-4 mt-sm-0 mt-4">
+                    <div class="objective-icon card m-auto py-4 mb-2 mb-sm-4 bg-secondary shadow-lg">
+                         <img class="team-member-img img-fluid p-4" src="{{url_for('static',filename='./assets/img/gemr.png')}}" alt="Card image">
+
+                    </div>
+                    <h2 class="objective-heading h3 mb-2 mb-sm-4 light-300"><a class="nav-link btn-outline-primary rounded-pill px-3" target="_blank" href="/gem_jewellery_verify">Gem Jewellery </a></h2>
+
+                </div>
+
+
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <!-- Start Footer -->
+    {% endblock %}

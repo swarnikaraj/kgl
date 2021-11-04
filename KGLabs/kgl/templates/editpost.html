@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>KGL-KRYSTAL GEMOLOGICAL LABORATORY</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="{{url_for('static',filename='assets/img/apple-icon.png')}}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{url_for('static',filename='assets/img/favicon.png')}}">
+    <!-- Load Require CSS -->
+    <link href="{{url_for('static',filename='assets/css/bootstrap.min.css')}}" rel="stylesheet">
+    <!-- Font CSS -->
+    <link href="{{url_for('static',filename='assets/css/boxicon.min.css')}}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Load Tempalte CSS -->
+    <link rel="stylesheet" href="{{url_for('static',filename='assets/css/templatemo.css')}}">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{url_for('static',filename='assets/css/custom.css')}}">
+
+
+<!--TemplateMo 561 Purple Buzz-->
+
+<!--https://templatemo.com/tm-561-purple-buzz-->
+
+
+</head>
+
+<body>
+<!--     Header-->
+    <nav id="main_nav" class="navbar navbar-expand-lg navbar-light bg-white shadow">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand h1" href="/"><img src="{{url_for('static',filename='assets/img/favicon.png')}}"  class="logo_img"></a>
+
+                  <span class="text-dark h1">KGL</span>
+                    <!-- <span class="text-primary h1">KGL</span>  -->
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler-success" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="navbar-toggler-success">
+                <div id="m-nav" class="flex-fill mx-xl-5 mb-2">
+                    <ul class="nav navbar-nav d-flex justify-content-between mx-xl-5 text-center text-dark">
+
+
+
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="/about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="/gemblog">Gemblogs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="/Education">Education</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="/contact">Contact</a>
+                        </li>
+                    </ul>
+
+                 </div>
+
+
+                  <button> <a class="nav-link ghost_btn" href="/verify"  id="dropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" >Verify your Report</a></button>
+
+
+            </div>
+        </div>
+    </nav>
+    <!-- Close Header -->
+ <div id="work_single_banner" class="bg-light w-100">
+        <div class="container-fluid text-light d-flex justify-content-center align-items-center border-0 rounded-0 p-0 py-5">
+            <div class="banner-content col-lg-8 m-lg-auto text-center py-5 px-3">
+                <h1 class="banner-heading h2 pb-5 typo-space-line-center">Admin Panel</h1>
+ <a href="/logout"><button class="btn banner-button rounded-pill px-md-5 px-4 py-2 radius-0  light-300"> Logout</button></a> <hr>   <a href="/dashboard"><button class="btn banner-button rounded-pill px-md-5 px-4 py-2 radius-0  light-300"> Dashboard</button></a>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+<div class="row py-3">
+            <div class="col-md-8 m-auto text-left justify-content-center">
+
+
+              <div class="row">
+            <div class="btn-toolbar justify-content-center pb-4" role="toolbar" aria-label="Toolbar with button groups">
+                <div class="btn-group me-2" role="group" aria-label="First group">
+                    <a href="/dashboard"><button type="button" class="btn btn-secondary text-white">Gemblogs</button></a>
+                </div>
+                <div class="btn-group me-2" role="group" aria-label="Second group">
+                    <a href="/editpost/0"><button type="button" class="btn btn-secondary text-white">Add new GemBlog</button></a>
+                </div>
+                <div class="btn-group me-2" role="group" aria-label="Second group">
+                    <a href="/contactmsg"><button type="button" class="btn btn-secondary text-white">Contact Message</button></a>
+                </div>
+                <div class="btn-group me-2" role="group" aria-label="Second group">
+                    <a href="/reports"><button type="button" class="btn btn-secondary text-white">Reports</button></a>
+                </div>
+                <div class="btn-group" role="group" aria-label="Third group">
+                    <a href="/editreport/0"><button type="button" class="btn btn-secondary text-white">Add new Report</button></a>
+                </div>
+            </div>
+        </div>
+
+            <hr>
+
+          <h1>Upload A File</h1>
+
+           <form action="/uploader" method="post" enctype="multipart/form-data">
+             <input type="file" name="file1">
+             <button type="submit">Submit</button>
+
+
+           </form>
+<hr>
+
+<hr>
+
+<a href="/editpost/0"><button class="btn btn-primary">Add New Post</button></a>
+
+<hr>
+
+
+ <h1>Add/Edit post</h1>
+                <div class="col-lg-8 ">
+                <form class="contact-form row" method="post" action="/editpost/{{sno}}" role="form">
+
+                    <div class="col-lg-6 mb-4">
+                        <div class="form-floating">
+                            <input type="text" class="form-control form-control-lg light-300" value="{{post.title}}" id="title" name="title" placeholder="Title">
+                            <label for="title"> Title/Heading</label>
+                        </div>
+                    </div><!-- End Input Name -->
+
+                    <div class="col-lg-6 mb-4">
+                        <div class="form-floating">
+                            <input type="text" class="form-control form-control-lg light-300"  value="{{post.slug}}" id="slug" name="slug" placeholder="slug">
+                            <label for="slug">Slug</label>
+                        </div>
+                    </div>
+                    <!-- End Input Email -->
+                     <div class="col-lg-6 mb-4">
+                        <div class="form-floating">
+                            <input type="text" class="form-control form-control-lg light-300" value="{{post.subtitle}}" id="subtitle" name="subtitle" placeholder="subtitle">
+                            <label for="subtitle">Sub-Heading</label>
+                        </div>
+                    </div>
+                     <div class="col-lg-6 mb-4">
+                        <div class="form-floating">
+                            <input type="text" class="form-control form-control-lg light-300" value="{{post.img_file}}" id="img_file" name="img_file" placeholder="Image">
+                            <label for="img_file">Add image</label>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="col-12">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control light-300"  placeholder="Paragraph 1" value="{{post.para1}}" name="para1" id="para1">
+                            <label for="para1">Paragraph 1</label>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-floating mb-3">
+                            <input class="form-control light-300"  placeholder="Paragraph 2" value="{{post.para2}}" name="para2" id="para2">
+                            <label for="para2">Paragraph 2</label>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-floating mb-3">
+                            <input class="form-control light-300"  placeholder="Paragraph 3"  value="{{post.para3}}"  name="para3" id="para3">
+
+                            <label for="para3">Paragraph 3</label>
+                        </div>
+                    </div>
+
+
+                     <div class="col-md-12 col-12 m-auto text-end">
+                        <button type="submit" class="btn btn-secondary rounded-pill px-md-5 px-4 py-2 radius-0 text-light light-300">Submit</button>
+                    </div>
+
+                </form>
+
+</div>
+</div>
+            </div>
+
+        <div class="w-100 bg-primary py-3">
+            <div class="container">
+                <div class="row pt-2">
+                    <div class="col-lg-6 col-sm-12">
+                        <p class="text-lg-start text-center text-light light-300">
+                            © Copyright 2021 KRYSTAL GEMOLOGICAL LABORATORY. All Rights Reserved.
+                        </p>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <!-- End Footer -->
+
+
+    <!-- Bootstrap -->
+    <script src="{{url_for('static',filename='assets/js/bootstrap.bundle.min.js')}}"></script>
+    <!-- Templatemo -->
+    <script src="{{url_for('static',filename='assets/js/templatemo.js')}}"></script>
+    <!-- Custom -->
+    <script src="{{url_for('static',filename='assets/js/custom.js')}}"></script>
+
+</body>
+
+</html>

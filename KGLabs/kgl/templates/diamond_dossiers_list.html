@@ -1,0 +1,81 @@
+{% extends 'controlbase.html' %}
+
+
+{% block title %}
+
+Employees
+{% endblock %}
+
+
+
+
+{% block content %}
+
+   <hr>
+
+          <h1>Upload A File</h1>
+
+           <form action="/uploader" method="post" enctype="multipart/form-data">
+             <input type="file" name="file1">
+             <button type="submit">Submit</button>
+
+
+           </form>
+<hr>
+
+<hr>
+
+<a href="/editdossier/0"><button class="btn btn-primary">Add New Report</button></a>
+
+<hr>
+
+
+<table class="table table-dark">
+  <thead>
+    <tr>
+
+      <th scope="col">Sno.</th>
+        <th scope="col">Report Number</th>
+        <th scope="col">Options</th>
+
+
+
+    </tr>
+  </thead>
+  <tbody>
+
+  {% for dossier in dossier %}
+    <tr>
+
+        <td>{{dossier.sno}}</td>
+        <td>{{dossier.reportnumber}}</td>
+
+
+       <td><a href="/editdossier/{{dossier.sno}}"><button class="banner-button btn">Edit</button></a>
+       <a href="/deletedossier/{{dossier.sno}}"><button class="banner-button btn">Delete</button></a>
+
+       </td>
+
+
+
+
+
+
+
+    </tr>
+
+
+  {% endfor %}
+
+
+
+
+  </tbody>
+</table>
+
+
+{% endblock %}
+
+
+
+

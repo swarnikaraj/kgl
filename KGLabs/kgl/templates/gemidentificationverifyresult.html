@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+
+Gem Identification report
+{% endblock %}
+
+
+
+
+
+
+
+
+
+{% block content %}
+
+<button id="downloader_btn" class=" nav-link btn-outline-primary rounded-pill px-3" > <a href="/{{heading}}/{{logo}}/{{title}}/{{subtitle}}/{{reportnumber}}/{{shape}}/{{measurement}}/{{weight}}/{{colour}}/{{specificgravity}}/{{refractiveindex}}/{{hardness}}/{{magnification}}/{{result}}/{{comment}}/{{img_file}}">Download</a></button>
+
+
+
+<div class="row py-3">
+            <div class="col-md-6 m-auto justify-content-center">
+
+
+              <div class="row">
+
+<table class="table table-striped justify-content-center">
+  <thead>
+    <tr>
+
+      <th scope="col">Report Number</th>
+      <th scope="col">{{reportnumber}}</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+
+      <td>Shape</td>
+      <td>{{shape}}</td>
+
+    </tr>
+    <tr>
+
+      <td>Measurement</td>
+      <td>{{measurement}}</td>
+
+    </tr>
+    <tr>
+
+      <td>Weight</td>
+      <td>{{weight}}</td>
+
+    </tr>
+
+  <tr>
+
+      <td>Colour</td>
+      <td>{{colour}}</td>
+
+    </tr>
+
+  <tr>
+
+      <td>Specific Gravity</td>
+      <td>{{specificgravity}}</td>
+
+    </tr>
+
+
+  <tr>
+
+      <td>Refractive Index</td>
+      <td>{{refractiveindex}}</td>
+
+    </tr>
+
+  <tr>
+
+      <td>Hardness</td>
+      <td>{{hardness}}</td>
+
+    </tr>
+
+
+  <tr>
+
+      <td>Magnification</td>
+      <td>{{magnification}}</td>
+
+    </tr>
+
+
+  <tr>
+
+      <td>Result</td>
+      <td>{{result}}</td>
+
+    </tr>
+
+
+  <tr>
+
+      <td>Comment</td>
+      <td>{{comment}}</td>
+
+    </tr>
+
+
+
+
+  </tbody>
+</table>
+
+
+</div>
+
+    </div>
+
+</div>
+
+
+{% endblock %}

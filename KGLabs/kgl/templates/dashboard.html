@@ -1,0 +1,72 @@
+{% extends 'controlbase.html' %}
+
+
+{% block title %}
+
+Employees
+{% endblock %}
+
+
+
+
+{% block content %}
+
+
+
+
+
+
+           <hr>
+
+          <h1>Upload A File</h1>
+
+           <form action="/uploader" method="post" enctype="multipart/form-data">
+             <input type="file" name="file1">
+             <button type="submit">Submit</button>
+
+
+           </form>
+<hr>
+
+<hr>
+
+<a href="/editpost/0"><button class="btn btn-primary">Add New Post</button></a>
+
+<hr>
+
+
+
+
+
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">sno</th>
+      <th scope="col">Title</th>
+      <th scope="col">Edit</th>
+      <th scope="col">Delete</th>
+
+{% for post in posts %}
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">{{post.sno}}</th>
+      <td>{{post.title}}</td>
+      <td><a href="/editpost/{{post.sno}}"><button class="banner-button btn">Edit</button></a> </td>
+      <td><a href="/deletepost/{{post.sno}}"><button class="banner-button btn">Delete</button></a> </td>
+
+
+    </tr>
+
+
+  {% endfor %}
+
+
+
+
+  </tbody>
+</table>
+
+         {% endblock %}

@@ -1,0 +1,129 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+
+Diamond Jewellery Report
+{% endblock %}
+
+
+
+
+{% block content %}
+
+
+<button id="downloader_btn" class=" nav-link btn-outline-primary rounded-pill px-3" > <a href="/{{heading}}/{{logo}}/{{title}}/{{subtitle}}/{{reportnumber}}/{{shape}}/{{measurement}}/{{carat}}/{{colourgrade}}/{{claritygrade}}/{{cutgrade}}/{{polish}}/{{symmetry}}/{{fluorescence}}/{{comment}}/{{img_file}}">Download</a></button>
+
+
+
+<div class="row py-3">
+            <div class="col-md-6 m-auto justify-content-center">
+
+
+              <div class="row">
+
+<table class="table table-striped justify-content-center">
+  <thead>
+    <tr>
+
+      <th scope="col">Report Number</th>
+      <th scope="col">{{reportnumber}}</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+
+      <td>Shape and Cutting Style</td>
+      <td>{{shape}}</td>
+
+    </tr>
+
+    <tr>
+
+      <td>Measurement</td>
+      <td>{{measurement}}</td>
+
+    </tr>
+
+    <tr>
+
+      <td>Carat</td>
+      <td>{{carat}}</td>
+
+    </tr>
+
+
+
+    <tr>
+
+      <td>Color Grade</td>
+      <td>{{colourgrade}}</td>
+
+    </tr>
+
+
+
+  <tr>
+
+      <td>Clarity Grade</td>
+      <td>{{claritygrade}}</td>
+
+    </tr>
+
+    <tr>
+
+      <td>Cut Grade</td>
+      <td>{{cutgrade}}</td>
+
+    </tr>
+
+
+    <tr>
+
+      <td>Polish</td>
+      <td>{{polish}}</td>
+
+    </tr>
+
+    <tr>
+
+      <td>Symmetry</td>
+      <td>{{symmetry}}</td>
+
+    </tr>
+
+
+
+     <tr>
+
+      <td>Fluorescence</td>
+      <td>{{fluorescence}}</td>
+
+    </tr>
+
+
+     <tr>
+
+      <td>Comments</td>
+      <td>{{comment}}</td>
+
+     </tr>
+
+
+
+
+
+
+
+
+  </tbody>
+</table>
+
+
+</div>
+    </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,69 @@
+{% extends 'controlbase.html' %}
+
+
+{% block title %}
+
+Reports
+{% endblock %}
+
+
+
+
+{% block content %}
+
+   <hr>
+
+          <h1>Upload A File</h1>
+
+           <form action="/uploader" method="post" enctype="multipart/form-data">
+             <input type="file" name="file1">
+             <button type="submit">Submit</button>
+
+
+           </form>
+<hr>
+
+<hr>
+
+<a href="/editreport/0"><button class="btn btn-primary">Add New Report</button></a>
+
+<hr>
+
+
+
+
+
+<table class="table table-dark">
+  <thead>
+    <tr>
+<!--      <th scope="col">sno</th>-->
+      <th scope="col">Sno</th>
+      <th scope="col">Summary No</th>
+      <th scope="col">Edit</th>
+      <th scope="col">Delete</th>
+
+{% for kglab in kglab %}
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">{{kglab.sno}}</th>
+      <td>{{kglab.summary}}</td>
+      <td><a href="/editreport/{{kglab.sno}}"><button class="banner-button btn">Edit</button></a> </td>
+      <td><a href="/deletereport/{{kglab.sno}}"><button class="banner-button btn">Delete</button></a> </td>
+
+</tr>
+  {% endfor %}
+
+
+
+
+  </tbody>
+</table>
+
+
+{% endblock %}
+
+
+

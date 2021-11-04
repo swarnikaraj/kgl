@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+
+Lab Grown Diamond
+
+{% endblock %}
+
+
+
+
+{% block content %}
+
+
+
+
+
+    <!-- Close Header -->
+
+    <!-- Close Header -->
+
+
+    <!-- Start Banner Hero -->
+    <div id="work_banner" class="banner-wrapper bg-light w-100 py-5">
+        <div class="banner-vertical-center-work container text-light d-flex justify-content-center align-items-center py-5 p-0">
+            <div class="banner-content col-lg-8 col-12 m-lg-auto text-center">
+                <h1 class="banner-heading h2 display-3 pb-5 semi-bold-600 typo-space-line-center">Verify Your Report</h1>
+
+
+
+            </div>
+        </div>
+    </div>
+    <!-- End Banner Hero -->
+
+
+    <!-- Start Contact -->
+
+ <section class="banner-bg bg-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mx-auto my-4 p-3">
+                    <form action="/verify_lab_grown " method="POST"><h1 class="h5 text-center">Fill up your Summary Number/KGL ID/Certificate No.</h1>
+                    <div class="input-group py-3">
+
+                        <input name="reportno" type="text" class="form-control form-control-lg rounded-pill rounded-end" id="reportno" placeholder="Summary Number" aria-label="Summary No.">
+                        <button class="btn btn-secondary text-white btn-lg rounded-pill rounded-start px-lg-4" type="submit">Verify</button>
+                    </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <!-- Start Footer -->
+   {% endblock %}
